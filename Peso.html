@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+       
+        <title>Tu peso en un lugar donde pesas menos</title>
+       
+    
+    <style>
+        body{
+            background-color: blue;
+            font-family: Helvetica;
+            color: white;
+        }
+    </style>
+    
+    
+    </head>
+    
+    <body>
+        <h1>Checa tu peso en otros planetas</h1>
+        
+        <p>Puedes observar tu peso en los diferentes planetas</p>
+        
+        <script>
+        
+        var tierra = 9.8;
+        var g_mercurio = 3.7;
+        var g_venus = 8.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var g_saturno = 10.4;
+        var g_urano = 8.8;
+        var g_neptuno = 11.1;
+        
+        var peso = parseInt(prompt("Ingrese su peso: "));
+        var peso_final;
+        var planeta;
+        
+        do{
+        planeta = parseInt(prompt("Elegi el planeta: \n1) Mercurio \n2) Venus\n3) Marte\n4) Jupiter \n5) Saturno \n6) Urano \n7) Neptuno"));   
+            
+        }while((planeta<=0)||(planeta>=8)){
+            switch(planeta){
+                case 1:
+                peso_final = parseFloat((peso*g_mercurio)/tierra).toFixed(2);
+                    
+                document.write("Tu peso en Mercurio es: "+peso_final+" Kilos");
+                break;
+                    
+                case 2:
+                peso_final = parseFloat((peso*g_venus)/tierra).toFixed(2);
+                document.write("Tu peso en Venus es: "+peso_final+" Kilos");
+                break;
+                
+                case 3:
+                peso_final = parseFloat((peso*g_marte)/tierra).toFixed(2);
+                document.write("Tu peso en Marte es: "+peso_final+" Kilos");
+                break;
+                    
+                case 4:
+                peso_final = parseFloat((peso*g_jupiter)/tierra).toFixed(2);
+                document.write("Tu peso en Jupiter es: "+peso_final+" Kilos");
+                break;
+                    
+                case 5:
+                peso_final = parseFloat((peso*g_saturno)/tierra).toFixed(2);
+                document.write("Tu peso en Saturno es: "+peso_final+" Kilos");
+                break;
+                    
+                case 6:
+                peso_final = parseFloat((peso*g_urano)/tierra).toFixed(2);
+                document.write("Tu peso en Urano es: "+peso_final+" Kilos");
+                break;
+                    
+                case 7:
+                peso_final = parseFloat((peso*g_neptuno)/tierra).toFixed(2);
+                document.write("Tu peso en Neptuno es: "+peso_final+" Kilos");
+                break;
+                    
+                default:
+                document.write("No existe el numero que ingreso");
+            }
+        }
+        
+    </script>
+        
+    </body>
+    
+</html>
